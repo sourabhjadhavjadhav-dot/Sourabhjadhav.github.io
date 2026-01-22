@@ -118,6 +118,13 @@ module.exports = function (eleventyConfig) {
     // BUILD CONFIGURATION
     // Define input/output directories and template engine
     // ═════════════════════════════════════════════════════════════════════════
+eleventyConfig.addCollection("portfolio", function () {
+  return [
+    "/assets/images/portfolio/port1.jpg",
+    "/assets/images/portfolio/port2.jpg",
+    "/assets/images/portfolio/port3.jpg"
+  ].map(url => ({ url }));
+});
 
     return {
   pathPrefix: "/",
