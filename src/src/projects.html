@@ -1,0 +1,12 @@
+---
+layout: base
+title: Projects
+---
+
+<section class="portfolio-grid">
+  {% for image in collections.portfolio %}
+    <a href="{{ image.url }}" class="portfolio-item">
+      <img src="{{ image.url }}" alt="Project image" loading="lazy">
+    </a>
+  {% endfor %}
+</section>
